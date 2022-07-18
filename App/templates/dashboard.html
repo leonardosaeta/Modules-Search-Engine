@@ -28,10 +28,8 @@
         <div class="sidebar">
             <ul>
                 <li><a href=""><i class="bi bi-speedometer2"> </i> Dashboard</a></li>
-                <li> <a href="{{url_for('mycourses')}}"><i class="bi bi-mortarboard-fill"> </i> My Course</a></li>
-                <li><a href=""><i class="bi bi-calendar"> </i> Calendar</a></li>
-                <li><a href=""><i class="bi bi-hourglass-split"> </i> Deadlines</a></li>
-                <li><a href=""><i class="bi bi-mailbox2"> </i> Mail</a></li>
+                <li> <a href="{{url_for('courses')}}"><i class="bi bi-mortarboard-fill"> </i> My Course</a></li>
+                <li><a href="{{url_for('upload')}}"><i class="bi bi-calendar"> </i>Upload</a></li>
             </ul>
         </div>
         {% block content %} {% endblock %}

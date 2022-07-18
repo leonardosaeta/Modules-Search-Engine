@@ -73,25 +73,16 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-@app.route('/mycourses', methods=['GET', 'POST'])
+@app.route('/courses', methods=['GET', 'POST'])
 @login_required
-def mycourses():
-    return render_template('mycourses.html')
+def courses():
+    return render_template('courses.html')
 
-@app.route('/year1', methods=['GET', 'POST'])
+@app.route('/upload', methods=['GET', 'POST'])
 @login_required
-def year1():
-    return render_template('year1.html')
+def upload():
+    return render_template('upload.html')
 
-@app.route('/year2', methods=['GET', 'POST'])
-@login_required
-def year2():
-    return render_template('year2.html')
-
-@app.route('/year2', methods=['GET', 'POST'])
-@login_required
-def year3():
-    return render_template('year2.html')
 
 @app.route('/logout', methods=['GET', 'POST'])
 @login_required
