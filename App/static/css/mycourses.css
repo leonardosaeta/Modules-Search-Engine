@@ -1,0 +1,58 @@
+.mainframe {
+    text-align: center;
+    padding: 5%;
+}
+
+#searchbtn {}
+
+.search-bar {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 2%;
+    border-radius: 25px;
+}
+
+hr {
+    margin: 20%;
+    width: 60%;
+    size: 30;
+}
+
+.years {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.yearx {
+    color: white;
+    font-size: larger;
+    background-color: #EE821E;
+    margin: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 25px;
+    transition: .02s;
+    cursor: pointer;
+}
+
+#y1:hover {
+    transition: .2s;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#y2:hover {
+    transition: .2s;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#y3:hover {
+    transition: .2s;
+    text-decoration: none;
+    font-size: larger;
+}

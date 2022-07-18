@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="heading">
+        <img class="brunel-logo" src="{{url_for( 'static',filename='images/brunel-logo.png' ) }}">
+    </header>
+    <main class="mainn">
+        <div class="greyframe">
+            <p class="signInTitle">Sign In</p>
+            <p class="logDetails">Please sign in with your student number (eg 1201234) or network username (eg hlstikb), and network password.
+            </p>
+            <form method="POST" , action="">
+                {{form.hidden_tag() }}
+                <label for="fname">Student number or network username:</label> <br/>{{form.username }}<br/>
+                <label for="lname">Network password:</label> <br/>{{form.password}} <br/>{{form.submit}}
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

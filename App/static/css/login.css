@@ -1,0 +1,74 @@
+body {
+    margin: 0%;
+}
+
+.heading {
+    position: flex;
+    background-color: #00325B;
+    padding: 5%;
+}
+
+.greyframe {
+    position: flex;
+    vertical-align: middle;
+    border-radius: 25px;
+    background-color: #D3D3D3;
+    text-align: center;
+    margin: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    max-width: 1000px;
+}
+
+.signInTitle {
+    color: rgb(166, 15, 45);
+    font-size: x-large;
+    text-shadow: 1.5px 1.5px #9d9d9d;
+}
+
+.logDetails {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 7%;
+}
+
+#username {
+    border-radius: 25px;
+    font-size: medium;
+    border: 1px solid #ccc;
+    margin-top: 0.7%;
+    margin-bottom: 0.7%;
+}
+
+#password {
+    border: 1px solid #ccc;
+    font-size: medium;
+    border-radius: 25px;
+    margin-top: 0.7%;
+}
+
+#submit {
+    margin-top: 2%;
+    font-size: large;
+    color: white;
+    background-color: #00325B;
+    padding-top: 10%;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 25px;
+}
+
+.submit:hover {
+    opacity: 0.5;
+}
+
+.footer {
+    position: calc();
+    color: white;
+    background-color: #00325B;
+    padding: 5%;
+    text-align: center;
+}

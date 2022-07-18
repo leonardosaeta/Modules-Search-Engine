@@ -1,0 +1,30 @@
+<head>
+    <title>My Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mycourses.css') }}">
+</head>
+
+{% extends "dashboard.html" %} {% block content%}
+
+<div class="mainframe">
+    <form action="">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button><i class="bi bi-search" id="searchbtn"></i>
+        </button>
+    </form>
+
+    <hr size="100" noshade>
+</div>
+
+<div class="years">
+    <a href="{{url_for('year1')}}" class="yearx" id="y1">
+        Year 1
+    </a>
+
+    <a href="{{url_for('year2')}}" class="yearx" id="y2">
+        Year 2
+    </a>
+    <a href="{{url_for('year3')}}" class="yearx" id="y3">
+        Year 3
+    </a>
+</div>
+{% endblock%}
