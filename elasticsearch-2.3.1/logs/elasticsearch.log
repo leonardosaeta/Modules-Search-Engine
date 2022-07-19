@@ -1,0 +1,15 @@
+[2022-07-19 12:15:53,671][INFO ][node                     ] [Elektra] version[2.3.1], pid[6198], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-19 12:15:53,673][INFO ][node                     ] [Elektra] initializing ...
+[2022-07-19 12:15:54,213][INFO ][plugins                  ] [Elektra] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-19 12:15:54,236][INFO ][env                      ] [Elektra] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [421.6gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-19 12:15:54,236][INFO ][env                      ] [Elektra] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-19 12:15:54,236][WARN ][env                      ] [Elektra] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-19 12:15:55,856][INFO ][node                     ] [Elektra] initialized
+[2022-07-19 12:15:55,857][INFO ][node                     ] [Elektra] starting ...
+[2022-07-19 12:15:56,004][INFO ][transport                ] [Elektra] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-19 12:15:56,009][INFO ][discovery                ] [Elektra] elasticsearch/RyIYUk-KRaWgbLsuQzRp_A
+[2022-07-19 12:15:59,166][INFO ][cluster.service          ] [Elektra] new_master {Elektra}{RyIYUk-KRaWgbLsuQzRp_A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-19 12:15:59,198][INFO ][http                     ] [Elektra] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-19 12:15:59,199][INFO ][node                     ] [Elektra] started
+[2022-07-19 12:15:59,274][INFO ][gateway                  ] [Elektra] recovered [1] indices into cluster_state
+[2022-07-19 12:15:59,671][INFO ][cluster.routing.allocation] [Elektra] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][2], [catalogue][2]] ...]).
