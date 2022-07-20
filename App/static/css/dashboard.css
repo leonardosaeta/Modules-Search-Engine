@@ -53,10 +53,6 @@ body {
     padding-left: 5%;
 }
 
-main {
-    max-width: 1000px;
-}
-
 .sidebar {
     position: absolute;
     background-color: #E1E1E1;

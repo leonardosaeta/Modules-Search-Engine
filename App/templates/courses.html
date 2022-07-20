@@ -1,18 +1,21 @@
-<head>
-    <title>Courses</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/mycourses.css') }}">
-</head>
-
-{% extends "dashboard.html" %} {% block content%}
-
+{% extends "mainTemplate.html" %} {% block title %} Courses {%endblock %} {%
+block css %}<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='css/mycourses.css') }}"
+/>
+{% endblock %} {% block content%}
 <div class="mainframe">
-    <form action="">
-        <input class="search-bar" type="text" placeholder="Search">
-        <button><i class="bi bi-search" id="searchbtn"></i>
-        </button>
-    </form>
+  <form action="">
+    <input class="search-bar" type="text" placeholder="Search" />
+    <button><i class="bi bi-search" id="searchbtn"></i></button>
+  </form>
 
-    <hr size="100" noshade>
+  <hr size="100" noshade />
 </div>
-</div>
-{% endblock%}
+{% endblock%} {% block script %}
+<script>
+  fetch("http://localhost:9200/catalogue/modules/_search").then((response) => {
+    response.json().then(console.log(response));
+  });
+</script>
+{% endblock %}

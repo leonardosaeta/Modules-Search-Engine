@@ -1,25 +1,29 @@
-<head>
-    <title>Upload documents</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/upload.css') }}">
-</head>
 
-{% extends "dashboard.html" %} {% block content%}
+{% extends "mainTemplate.html" %}  
 
+{% block title %} Upload {% endblock %}
+{% block css%} <link rel="stylesheet" href="{{ url_for('static',filename='css/upload.css') }}"> {% endblock %}
+
+{% block content %}
 <div class="mainframe">
-    <form class="insert-details" action="">
-        <input class="search-bar" type="text" placeholder="Department">
-        <input class="search-bar" type="text" placeholder="Module">
-        <input class="search-bar" type="text" placeholder="Title">
-        <input class="search-bar" type="text" placeholder="Type ex.Bsc or Msc">
-        <input class="search-bar" type="text" placeholder="Key Words">
-        <input class="search-bar" type="text" placeholder="Year">
-        <button><i class="bi bi-upload" id="upload-button"></i>
-        </button>
-    </form>
 
+<div class="sub-frame">
 
+        <form class="insert-details" action="">
+            <input class="upload-field" type="text" placeholder="Department">
+            <input class="upload-field" type="text" placeholder="Module">
+            <input class="upload-field" type="text" placeholder="Title">
+            <input class="upload-field" type="text" placeholder="Type ex.Bsc or Msc">
+            <input class="upload-field" type="text" placeholder="Key Words">
+            <input class="upload-field" type="text" placeholder="Year">
+            <button class="upload-btn"><i class="bi bi-upload" id="upload-button"></i></button>
+        </form>
+
+    </div>
+    
+    
 </div>
 
 
 </div>
-{% endblock%}
+{% endblock %}

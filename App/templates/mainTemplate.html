@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/dashboard.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    {% block css%} {% endblock %}
+  </head>
+
+  <body>
+    <header class="heading">
+      <div class="left-heading">
+        <i class="bi bi-list" id="btn"></i>
+        <a href="{{url_for('dashboard')}}"
+          ><img
+            class="brunel-logo"
+            src="{{url_for( 'static',filename='images/brunel-logo.png' ) }}"
+        /></a>
+      </div>
+      <div class="right-heading">
+        <a href=""
+          ><img
+            class="bell"
+            src="{{url_for( 'static',filename='images/bell.png' ) }}"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            class="user"
+            src="{{url_for( 'static',filename='images/user.png' ) }}"
+            alt=""
+        /></a>
+        <a href="{{url_for('logout')}}"
+          ><img
+            class="logout"
+            src="{{url_for( 'static',filename='images/logout-32.png' ) }}"
+            alt=""
+        /></a>
+        <p class="username">Username</p>
+      </div>
+    </header>
+    <main>
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href=""><i class="bi bi-speedometer2"> </i> Dashboard</a>
+          </li>
+          <li>
+            <a href="{{url_for('courses')}}"
+              ><i class="bi bi-mortarboard-fill"> </i>Modules</a
+            >
+          </li>
+          <li>
+            <a href="{{url_for('upload')}}"
+              ><i class="bi bi-calendar"> </i>Upload</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      {% block content %} {% endblock %}
+    </main>
+
+    <script>
+      const menu = document.querySelector("#btn");
+      const sidebar = document.querySelector(".sidebar");
+      menu.addEventListener("click", () => {
+        sidebar.classList.toggle("is-active");
+      });
+    </script>
+
+    {% block script %} {% endblock %}
+  </body>
+</html>

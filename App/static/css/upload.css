@@ -1,5 +1,47 @@
+.mainframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.sub-frame{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(225, 225, 225); 
+    border-radius: 25px;
+    height: 60%;
+    width: 70%;
+    max-width: 700px;
+
+}
+
 .insert-details{
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    width: 60%;
+    margin-top: 10% ;
+    max-width: 700px;
+}
+
+.upload-field{
+    margin-top: 4%;
+    padding: 3%;
+    border-radius: 25px;
+   
+}
+
+.upload-btn{
+    margin-top: 20%;
+    margin-bottom: 10%;
+    background-color: #00325B;
+    color: white;
+    font-size: larger;
+    padding: 2%;
+}
+
+.upload-btn:hover{
+    font-size: large;
+    transition: 1s;
+    padding: 4%;
 }
