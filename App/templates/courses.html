@@ -10,12 +10,14 @@ block css %}<link
     <button><i class="bi bi-search" id="searchbtn"></i></button>
   </form>
 
-  <hr size="100" noshade />
+  <div id="modules-display"></div>
 </div>
 {% endblock%} {% block script %}
 <script>
-  fetch("http://localhost:9200/catalogue/modules/_search").then((response) => {
-    response.json().then(console.log(response));
-  });
+  fetch("http://localhost:9200/catalogue/modules/_search")
+    .then((response) => response.json())
+    .then((data) => (data = data.hits.hits))
+    .then((data) => data = data)
+    .then((data) => document.querySelector("#modules-display").innerHTML = data);
 </script>
 {% endblock %}

@@ -1,0 +1,265 @@
+[2022-07-21 13:44:05,235][INFO ][node                     ] [Sybil Dorn] stopping ...
+[2022-07-21 13:44:05,393][INFO ][node                     ] [Sybil Dorn] stopped
+[2022-07-21 13:44:05,394][INFO ][node                     ] [Sybil Dorn] closing ...
+[2022-07-21 13:44:05,412][INFO ][node                     ] [Sybil Dorn] closed
+[2022-07-21 13:58:05,473][INFO ][node                     ] [Dreamqueen] version[2.3.1], pid[4951], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-21 13:58:05,474][INFO ][node                     ] [Dreamqueen] initializing ...
+[2022-07-21 13:58:06,138][INFO ][plugins                  ] [Dreamqueen] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-21 13:58:06,164][INFO ][env                      ] [Dreamqueen] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [417.5gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-21 13:58:06,164][INFO ][env                      ] [Dreamqueen] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-21 13:58:06,165][WARN ][env                      ] [Dreamqueen] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-21 13:58:07,969][INFO ][node                     ] [Dreamqueen] initialized
+[2022-07-21 13:58:07,970][INFO ][node                     ] [Dreamqueen] starting ...
+[2022-07-21 13:58:08,139][INFO ][transport                ] [Dreamqueen] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-21 13:58:08,145][INFO ][discovery                ] [Dreamqueen] elasticsearch/9bMYiWrZQVWbYmuYmqDVLA
+[2022-07-21 13:58:11,312][INFO ][cluster.service          ] [Dreamqueen] new_master {Dreamqueen}{9bMYiWrZQVWbYmuYmqDVLA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-21 13:58:11,368][INFO ][http                     ] [Dreamqueen] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-21 13:58:11,369][INFO ][node                     ] [Dreamqueen] started
+[2022-07-21 13:58:11,447][INFO ][gateway                  ] [Dreamqueen] recovered [1] indices into cluster_state
+[2022-07-21 13:58:11,950][INFO ][cluster.routing.allocation] [Dreamqueen] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][2]] ...]).
+[2022-07-21 15:10:22,460][DEBUG][action.search            ] [Dreamqueen] [catalogue][4], node[9bMYiWrZQVWbYmuYmqDVLA], [P], v[14], s[STARTED], a[id=uSkOjBVmRmaXSj6oZwjRjA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@20d43e77] lastShard [true]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more
+[2022-07-21 15:10:22,461][DEBUG][action.search            ] [Dreamqueen] [catalogue][3], node[9bMYiWrZQVWbYmuYmqDVLA], [P], v[14], s[STARTED], a[id=immvunioTl6lRLjjMwFyRA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@20d43e77] lastShard [true]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more
+[2022-07-21 15:10:22,461][DEBUG][action.search            ] [Dreamqueen] [catalogue][0], node[9bMYiWrZQVWbYmuYmqDVLA], [P], v[14], s[STARTED], a[id=o9Rl0f6rRVu6PC-gLb6Jxw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@20d43e77] lastShard [true]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more
+[2022-07-21 15:10:22,461][DEBUG][action.search            ] [Dreamqueen] [catalogue][2], node[9bMYiWrZQVWbYmuYmqDVLA], [P], v[14], s[STARTED], a[id=6M7uP6n0SOmy2gbE0kY7iQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@20d43e77]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more
+[2022-07-21 15:10:22,460][DEBUG][action.search            ] [Dreamqueen] [catalogue][1], node[9bMYiWrZQVWbYmuYmqDVLA], [P], v[14], s[STARTED], a[id=hLE8nf2LS1KrwVuLoKDm7w]: Failed to execute [org.elasticsearch.action.search.SearchRequest@20d43e77] lastShard [true]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more
+[2022-07-21 15:10:22,468][DEBUG][action.search            ] [Dreamqueen] All shards failed for phase: [query]
+RemoteTransportException[[Dreamqueen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+Caused by: SearchParseException[failed to parse search source [{"query":{"query_string":{"query":"alina/_source","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]; nested: QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:655)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: [catalogue] QueryParsingException[Failed to parse query [alina/_source]]; nested: ParseException[Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"]; nested: TokenMgrError[Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"];
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:246)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'alina/_source': Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:122)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:848)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:227)
+	... 18 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 14.  Encountered: <EOF> after : "/_source"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1130)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:589)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:472)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:479)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:465)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:171)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:160)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:117)
+	... 20 more

@@ -1,38 +1,4 @@
-[2022-07-20 08:58:29,522][INFO ][node                     ] [Occulus] stopping ...
-[2022-07-20 08:58:29,670][INFO ][node                     ] [Occulus] stopped
-[2022-07-20 08:58:29,671][INFO ][node                     ] [Occulus] closing ...
-[2022-07-20 08:58:29,687][INFO ][node                     ] [Occulus] closed
-[2022-07-20 08:59:44,162][INFO ][node                     ] [Shockwave] version[2.3.1], pid[3600], build[bd98092/2016-04-04T12:25:05Z]
-[2022-07-20 08:59:44,163][INFO ][node                     ] [Shockwave] initializing ...
-[2022-07-20 08:59:44,827][INFO ][plugins                  ] [Shockwave] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-07-20 08:59:44,856][INFO ][env                      ] [Shockwave] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [418gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-07-20 08:59:44,856][INFO ][env                      ] [Shockwave] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-07-20 08:59:44,856][WARN ][env                      ] [Shockwave] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-07-20 08:59:46,713][INFO ][node                     ] [Shockwave] initialized
-[2022-07-20 08:59:46,714][INFO ][node                     ] [Shockwave] starting ...
-[2022-07-20 08:59:46,865][INFO ][transport                ] [Shockwave] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-07-20 08:59:46,871][INFO ][discovery                ] [Shockwave] elasticsearch/xBI6DBcUS1yilwNHaTpwMQ
-[2022-07-20 08:59:50,047][INFO ][cluster.service          ] [Shockwave] new_master {Shockwave}{xBI6DBcUS1yilwNHaTpwMQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-07-20 08:59:50,086][INFO ][http                     ] [Shockwave] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-07-20 08:59:50,089][INFO ][node                     ] [Shockwave] started
-[2022-07-20 08:59:50,161][INFO ][gateway                  ] [Shockwave] recovered [1] indices into cluster_state
-[2022-07-20 08:59:50,622][INFO ][cluster.routing.allocation] [Shockwave] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][3]] ...]).
-[2022-07-20 13:40:36,730][INFO ][node                     ] [Shockwave] stopping ...
-[2022-07-20 13:40:36,870][INFO ][node                     ] [Shockwave] stopped
-[2022-07-20 13:40:36,871][INFO ][node                     ] [Shockwave] closing ...
-[2022-07-20 13:40:36,893][INFO ][node                     ] [Shockwave] closed
-[2022-07-20 16:11:43,359][INFO ][node                     ] [Sybil Dorn] version[2.3.1], pid[2688], build[bd98092/2016-04-04T12:25:05Z]
-[2022-07-20 16:11:43,360][INFO ][node                     ] [Sybil Dorn] initializing ...
-[2022-07-20 16:11:44,016][INFO ][plugins                  ] [Sybil Dorn] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-07-20 16:11:44,045][INFO ][env                      ] [Sybil Dorn] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [418.5gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-07-20 16:11:44,045][INFO ][env                      ] [Sybil Dorn] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-07-20 16:11:44,045][WARN ][env                      ] [Sybil Dorn] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-07-20 16:11:45,880][INFO ][node                     ] [Sybil Dorn] initialized
-[2022-07-20 16:11:45,881][INFO ][node                     ] [Sybil Dorn] starting ...
-[2022-07-20 16:11:46,043][INFO ][transport                ] [Sybil Dorn] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-07-20 16:11:46,053][INFO ][discovery                ] [Sybil Dorn] elasticsearch/EUGpKFuwSNKSeo6tyTT-Xw
-[2022-07-20 16:11:49,222][INFO ][cluster.service          ] [Sybil Dorn] new_master {Sybil Dorn}{EUGpKFuwSNKSeo6tyTT-Xw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-07-20 16:11:49,278][INFO ][http                     ] [Sybil Dorn] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-07-20 16:11:49,280][INFO ][node                     ] [Sybil Dorn] started
-[2022-07-20 16:11:49,359][INFO ][gateway                  ] [Sybil Dorn] recovered [1] indices into cluster_state
-[2022-07-20 16:11:49,917][INFO ][cluster.routing.allocation] [Sybil Dorn] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][0]] ...]).
+[2022-07-22 09:44:52,966][INFO ][node                     ] [Dreamqueen] stopping ...
+[2022-07-22 09:44:53,152][INFO ][node                     ] [Dreamqueen] stopped
+[2022-07-22 09:44:53,154][INFO ][node                     ] [Dreamqueen] closing ...
+[2022-07-22 09:44:53,177][INFO ][node                     ] [Dreamqueen] closed
