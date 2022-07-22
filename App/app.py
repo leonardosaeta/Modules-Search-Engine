@@ -73,10 +73,10 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-@app.route('/courses', methods=['GET', 'POST'])
+@app.route('/modules', methods=['GET', 'POST'])
 @login_required
-def courses():
-    return render_template('courses.html')
+def modules():
+    return render_template('modules.html')
     
 
 @app.route('/upload', methods=['GET', 'POST'])

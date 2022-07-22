@@ -2,3 +2,18 @@
 [2022-07-22 09:44:53,152][INFO ][node                     ] [Dreamqueen] stopped
 [2022-07-22 09:44:53,154][INFO ][node                     ] [Dreamqueen] closing ...
 [2022-07-22 09:44:53,177][INFO ][node                     ] [Dreamqueen] closed
+[2022-07-22 09:51:14,660][INFO ][node                     ] [Ape] version[2.3.1], pid[8207], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-22 09:51:14,661][INFO ][node                     ] [Ape] initializing ...
+[2022-07-22 09:51:15,287][INFO ][plugins                  ] [Ape] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-22 09:51:15,313][INFO ][env                      ] [Ape] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [418gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-22 09:51:15,313][INFO ][env                      ] [Ape] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-22 09:51:15,314][WARN ][env                      ] [Ape] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-22 09:51:17,090][INFO ][node                     ] [Ape] initialized
+[2022-07-22 09:51:17,091][INFO ][node                     ] [Ape] starting ...
+[2022-07-22 09:51:17,245][INFO ][transport                ] [Ape] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-22 09:51:17,249][INFO ][discovery                ] [Ape] elasticsearch/N1nUMFEHT2mtF6GRJyB9ZQ
+[2022-07-22 09:51:20,410][INFO ][cluster.service          ] [Ape] new_master {Ape}{N1nUMFEHT2mtF6GRJyB9ZQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-22 09:51:20,477][INFO ][http                     ] [Ape] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-22 09:51:20,481][INFO ][node                     ] [Ape] started
+[2022-07-22 09:51:20,552][INFO ][gateway                  ] [Ape] recovered [1] indices into cluster_state
+[2022-07-22 09:51:21,062][INFO ][cluster.routing.allocation] [Ape] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][0]] ...]).

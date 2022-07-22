@@ -9,15 +9,19 @@ block css %}<link
     <input class="search-bar" type="text" placeholder="Search" />
     <button><i class="bi bi-search" id="searchbtn"></i></button>
   </form>
-
-  <div id="modules-display"></div>
+  <table id="modules-display"></table>
 </div>
 {% endblock%} {% block script %}
 <script>
   fetch("http://localhost:9200/catalogue/modules/_search")
     .then((response) => response.json())
     .then((data) => (data = data.hits.hits))
-    .then((data) => data = data)
-    .then((data) => document.querySelector("#modules-display").innerHTML = data);
+    .then((data) => (data = data))
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        document.querySelector("#modules-display").innerHTML +=
+          data[i]._source.name + "<br>";
+      }
+    });
 </script>
 {% endblock %}
