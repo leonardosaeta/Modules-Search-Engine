@@ -1,5 +1,17 @@
-{% extends "mainTemplate.html" %} 
+{% extends "mainTemplate.html" %} {% block title %} Dashboard {% endblock %} {%
+block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='css/dashboard.css') }}"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock %} {%block content%}
 
-{% block title %} Dashboard {% endblock %}
-{% block content%} {% endblock %}
- 
+<form class="search-div">
+  <input class="search-bar" type="text" placeholder="Search" name="q"/>
+  <button class="submit-btn" type="submit">
+    <i class="bi bi-search" id="searchbtn"></i>
+  </button>
+</form>
+
+{% endblock %}

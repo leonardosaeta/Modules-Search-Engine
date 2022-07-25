@@ -5,8 +5,11 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
+import requests
+import json
 
 app = Flask(__name__)
+
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -76,7 +79,11 @@ def dashboard():
 @app.route('/modules', methods=['GET', 'POST'])
 @login_required
 def modules():
-    return render_template('modules.html')
+    req = requests.get('http://localhost:9200/catalogue/modules/_search')
+    data = req.content
+    json_data = json.loads(data)
+    data_length = len(json_data['hits']['hits']) 
+    return render_template('modules.html', data = json_data, length = data_length)
     
 
 @app.route('/upload', methods=['GET', 'POST'])

@@ -9,19 +9,10 @@ block css %}<link
     <input class="search-bar" type="text" placeholder="Search" />
     <button><i class="bi bi-search" id="searchbtn"></i></button>
   </form>
-  <table id="modules-display"></table>
+  <div id="modules-display">
+    {% for i in range(0, length) %}
+    <a> {{data.hits.hits[i]._source.name}} </a>
+    {%endfor%}
+  </div>
 </div>
-{% endblock%} {% block script %}
-<script>
-  fetch("http://localhost:9200/catalogue/modules/_search")
-    .then((response) => response.json())
-    .then((data) => (data = data.hits.hits))
-    .then((data) => (data = data))
-    .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        document.querySelector("#modules-display").innerHTML +=
-          data[i]._source.name + "<br>";
-      }
-    });
-</script>
-{% endblock %}
+{% endblock%} {% block script %} {% endblock %}

@@ -7,7 +7,7 @@
     <title>{% block title %} {% endblock %}</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static',filename='css/dashboard.css') }}"
+      href="{{ url_for('static',filename='css/mainTemplate.css') }}"
     />
     <link
       rel="stylesheet"
@@ -57,7 +57,7 @@
       <div class="sidebar">
         <ul>
           <li>
-            <a href=""><i class="bi bi-speedometer2"> </i> Dashboard</a>
+            <a href="{{url_for('dashboard')}}"><i class="bi bi-speedometer2"> </i> Dashboard</a>
           </li>
           <li>
             <a href="{{url_for('modules')}}"

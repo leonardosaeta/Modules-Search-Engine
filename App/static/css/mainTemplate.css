@@ -1,0 +1,107 @@
+body {
+    margin: 0%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00325B;
+    padding: 3%;
+    min-width: 600px;
+}
+
+.left-heading {
+    display: flex;
+    align-items: baseline;
+}
+
+.right-heading {
+    display: flex;
+    align-items: center;
+}
+
+.brunel-logo {
+    padding-left: 20%;
+}
+
+.bell {
+    width: 70%;
+    height: auto;
+}
+
+.user {
+    width: 100%;
+    height: auto;
+    padding-left: 10%;
+}
+
+.logout {
+    width: 90%;
+    padding-left: 5%;
+}
+
+.username {
+    color: white;
+    padding-left: 5%;
+}
+
+.sidebar {
+    position: absolute;
+    background-color: #E1E1E1;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    min-width: 200px;
+    transition: 1s;
+}
+
+.sidebar ul a {
+    display: block;
+    color: black;
+    font-size: medium;
+    margin: 3%;
+    padding: 3%;
+    line-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.mainframe {
+    width: 100%;
+}
+
+.sidebar a:hover {
+    color: white;
+    background-color: #00325B;
+    font-size: large;
+    transition: 0.6s;
+    text-decoration: none;
+}
+
+#btn {
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+label #btn {
+    cursor: pointer;
+}
+
+.sidebar.is-active {
+    left: 0px;
+    transition: 1s;
+}

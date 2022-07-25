@@ -1,19 +1,34 @@
-[2022-07-22 09:44:52,966][INFO ][node                     ] [Dreamqueen] stopping ...
-[2022-07-22 09:44:53,152][INFO ][node                     ] [Dreamqueen] stopped
-[2022-07-22 09:44:53,154][INFO ][node                     ] [Dreamqueen] closing ...
-[2022-07-22 09:44:53,177][INFO ][node                     ] [Dreamqueen] closed
-[2022-07-22 09:51:14,660][INFO ][node                     ] [Ape] version[2.3.1], pid[8207], build[bd98092/2016-04-04T12:25:05Z]
-[2022-07-22 09:51:14,661][INFO ][node                     ] [Ape] initializing ...
-[2022-07-22 09:51:15,287][INFO ][plugins                  ] [Ape] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-07-22 09:51:15,313][INFO ][env                      ] [Ape] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [418gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-07-22 09:51:15,313][INFO ][env                      ] [Ape] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-07-22 09:51:15,314][WARN ][env                      ] [Ape] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-07-22 09:51:17,090][INFO ][node                     ] [Ape] initialized
-[2022-07-22 09:51:17,091][INFO ][node                     ] [Ape] starting ...
-[2022-07-22 09:51:17,245][INFO ][transport                ] [Ape] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-07-22 09:51:17,249][INFO ][discovery                ] [Ape] elasticsearch/N1nUMFEHT2mtF6GRJyB9ZQ
-[2022-07-22 09:51:20,410][INFO ][cluster.service          ] [Ape] new_master {Ape}{N1nUMFEHT2mtF6GRJyB9ZQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-07-22 09:51:20,477][INFO ][http                     ] [Ape] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-07-22 09:51:20,481][INFO ][node                     ] [Ape] started
-[2022-07-22 09:51:20,552][INFO ][gateway                  ] [Ape] recovered [1] indices into cluster_state
-[2022-07-22 09:51:21,062][INFO ][cluster.routing.allocation] [Ape] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][0]] ...]).
+[2022-07-25 09:42:57,778][INFO ][node                     ] [Kristoff Vernard] version[2.3.1], pid[20887], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-25 09:42:57,780][INFO ][node                     ] [Kristoff Vernard] initializing ...
+[2022-07-25 09:42:58,442][INFO ][plugins                  ] [Kristoff Vernard] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-25 09:42:58,472][INFO ][env                      ] [Kristoff Vernard] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [416.7gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-25 09:42:58,472][INFO ][env                      ] [Kristoff Vernard] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-25 09:42:58,473][WARN ][env                      ] [Kristoff Vernard] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-25 09:43:00,337][INFO ][node                     ] [Kristoff Vernard] initialized
+[2022-07-25 09:43:00,337][INFO ][node                     ] [Kristoff Vernard] starting ...
+[2022-07-25 09:43:00,499][INFO ][transport                ] [Kristoff Vernard] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-25 09:43:00,505][INFO ][discovery                ] [Kristoff Vernard] elasticsearch/9pLqfLMMSZyDFQV4kC7lYA
+[2022-07-25 09:43:03,626][INFO ][cluster.service          ] [Kristoff Vernard] new_master {Kristoff Vernard}{9pLqfLMMSZyDFQV4kC7lYA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-25 09:43:03,690][INFO ][http                     ] [Kristoff Vernard] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-25 09:43:03,692][INFO ][node                     ] [Kristoff Vernard] started
+[2022-07-25 09:43:03,769][INFO ][gateway                  ] [Kristoff Vernard] recovered [1] indices into cluster_state
+[2022-07-25 09:43:04,308][INFO ][cluster.routing.allocation] [Kristoff Vernard] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][4]] ...]).
+[2022-07-25 10:08:55,497][INFO ][node                     ] [Kristoff Vernard] stopping ...
+[2022-07-25 10:08:55,626][INFO ][node                     ] [Kristoff Vernard] stopped
+[2022-07-25 10:08:55,627][INFO ][node                     ] [Kristoff Vernard] closing ...
+[2022-07-25 10:08:55,647][INFO ][node                     ] [Kristoff Vernard] closed
+[2022-07-25 13:00:31,824][INFO ][node                     ] [Terminator] version[2.3.1], pid[22163], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-25 13:00:31,825][INFO ][node                     ] [Terminator] initializing ...
+[2022-07-25 13:00:32,507][INFO ][plugins                  ] [Terminator] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-25 13:00:32,536][INFO ][env                      ] [Terminator] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [416.7gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-25 13:00:32,536][INFO ][env                      ] [Terminator] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-25 13:00:32,536][WARN ][env                      ] [Terminator] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-25 13:00:34,379][INFO ][node                     ] [Terminator] initialized
+[2022-07-25 13:00:34,380][INFO ][node                     ] [Terminator] starting ...
+[2022-07-25 13:00:34,538][INFO ][transport                ] [Terminator] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-25 13:00:34,544][INFO ][discovery                ] [Terminator] elasticsearch/eKC2D-NSTaWszgK0I5X7oA
+[2022-07-25 13:00:37,665][INFO ][cluster.service          ] [Terminator] new_master {Terminator}{eKC2D-NSTaWszgK0I5X7oA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-25 13:00:37,724][INFO ][http                     ] [Terminator] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-25 13:00:37,725][INFO ][node                     ] [Terminator] started
+[2022-07-25 13:00:37,808][INFO ][gateway                  ] [Terminator] recovered [1] indices into cluster_state
+[2022-07-25 13:00:38,297][INFO ][cluster.routing.allocation] [Terminator] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[catalogue][0], [catalogue][4], [catalogue][3], [catalogue][4], [catalogue][0]] ...]).
