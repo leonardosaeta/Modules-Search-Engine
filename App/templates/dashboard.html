@@ -4,14 +4,16 @@ block css %}
   rel="stylesheet"
   href="{{ url_for('static',filename='css/dashboard.css') }}"
 />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 {% endblock %} {%block content%}
 
-<form class="search-div">
-  <input class="search-bar" type="text" placeholder="Search" name="q"/>
+<form action=/dashboard/results class="search-div" method="post">
+  <input class="search-bar" type="text" placeholder="Search" name="input"/>
   <button class="submit-btn" type="submit">
     <i class="bi bi-search" id="searchbtn"></i>
   </button>
 </form>
 
+{% for i in range(0, leng) %}
+    <a> {{res.hits.hits[i]._source.name}} </a>
+    {%endfor%}
 {% endblock %}

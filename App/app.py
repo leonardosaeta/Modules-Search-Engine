@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request
+from flask import Flask, render_template, url_for, redirect, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -7,7 +7,9 @@ from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 import requests
 import json
+from elasticsearch6 import Elasticsearch
 
+es = Elasticsearch("http://localhost:9200/")
 app = Flask(__name__)
 
 db = SQLAlchemy(app)
@@ -58,6 +60,7 @@ class LoginForm(FlaskForm):
 
     submit = SubmitField('Login')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -73,27 +76,43 @@ def login():
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    length = 0
+
+    return render_template('dashboard.html', leng=length)
 
 
-@app.route('/modules', methods=['GET', 'POST'])
+@app.route("/dashboard/results", methods=['GET', 'POST'])
 @login_required
+def request_search():
+    search_term = request.form['input']
+    res = es.search(
+        index='catalogue',
+        body={"query": {"multi_match": {"query": search_term,"fields": ["name","subtopics","Department","Year","Module_learder"]}}})
+
+    resp = json.dumps(res)
+    respo = json.loads(resp)
+    length = len(respo['hits']['hits'])
+    return render_template('dashboard.html', res=respo, leng=length)
+
+
+@ app.route('/modules', methods=['GET', 'POST'])
+@ login_required
 def modules():
-    req = requests.get('http://localhost:9200/catalogue/modules/_search')
-    data = req.content
-    json_data = json.loads(data)
-    data_length = len(json_data['hits']['hits']) 
-    return render_template('modules.html', data = json_data, length = data_length)
-    
+    req=requests.get('http://localhost:9200/catalogue/modules/_search')
+    data=req.content
+    json_data=json.loads(data)
+    data_length=len(json_data['hits']['hits'])
+    return render_template('modules.html', data=json_data, length=data_length)
 
-@app.route('/upload', methods=['GET', 'POST'])
-@login_required
+
+@ app.route('/upload', methods=['GET', 'POST'])
+@ login_required
 def upload():
     return render_template('upload.html')
 
 
-@app.route('/logout', methods=['GET', 'POST'])
-@login_required
+@ app.route('/logout', methods=['GET', 'POST'])
+@ login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
@@ -101,11 +120,11 @@ def logout():
 
 @ app.route('/register', methods=['GET', 'POST'])
 def register():
-    form = RegisterForm()
+    form=RegisterForm()
 
     if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.password.data)
-        new_user = User(username=form.username.data, password=hashed_password)
+        hashed_password=bcrypt.generate_password_hash(form.password.data)
+        new_user=User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))
