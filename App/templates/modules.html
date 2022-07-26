@@ -4,15 +4,11 @@ block css %}<link
   href="{{ url_for('static',filename='css/mycourses.css') }}"
 />
 {% endblock %} {% block content%}
-<div class="mainframe">
-  <form action="">
-    <input class="search-bar" type="text" placeholder="Search" />
-    <button><i class="bi bi-search" id="searchbtn"></i></button>
-  </form>
   <div id="modules-display">
-    {% for i in range(0, length) %}
-    <a> {{data.hits.hits[i]._source.name}} </a>
-    {%endfor%}
+      {% for i in range(0, length) %}
+      <p class="single-module">
+        <a> {{data.hits.hits[i]._source.name}} </a>
+      </p>
+      {%endfor%}
   </div>
-</div>
 {% endblock%} {% block script %} {% endblock %}

@@ -5,3 +5,19 @@
 .search-bar{
     margin-top: 5%;
 }
+
+.results-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.single-search-result{
+    padding: 2%;
+    background-color: rgb(225, 225, 225);
+    margin-right: 12%;
+    margin-left: 12%;
+}

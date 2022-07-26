@@ -12,8 +12,13 @@ block css %}
     <i class="bi bi-search" id="searchbtn"></i>
   </button>
 </form>
-
-{% for i in range(0, leng) %}
+<div class="results-search">
+  {% for i in range(0, leng) %}
+  
+  <p class="single-search-result">
     <a> {{res.hits.hits[i]._source.name}} </a>
-    {%endfor%}
-{% endblock %}
+  </p>
+          
+  {%endfor%}
+  {% endblock %}
+</div>

@@ -1,27 +1,13 @@
-.mainframe {
-  text-align: center;
-  padding: 5%;
-}
-
-#searchbtn {
-}
-
-.search-bar {
-  background: rgba(255, 255, 255, 0.2);
-  padding-left: 2%;
-  border-radius: 25px;
-}
-
 #modules-display {
-  background-color: rgb(225, 225, 225); 
-  padding: 10%;
-  margin: 5%;
-  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-a {
-  text-decoration: none;
-  margin: 10%;
-  font-size: large;
-  cursor: pointer;
+.single-module{
+  background-color: rgb(225, 225, 225); 
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 3%;
 }
