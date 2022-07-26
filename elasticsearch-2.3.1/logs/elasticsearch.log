@@ -13,3 +13,7 @@
 [2022-07-26 08:11:17,934][INFO ][node                     ] [Toad-In-Waiting] started
 [2022-07-26 08:11:18,030][INFO ][gateway                  ] [Toad-In-Waiting] recovered [2] indices into cluster_state
 [2022-07-26 08:11:18,683][INFO ][cluster.routing.allocation] [Toad-In-Waiting] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][1], [catalogue][1]] ...]).
+[2022-07-26 10:38:55,297][INFO ][node                     ] [Toad-In-Waiting] stopping ...
+[2022-07-26 10:38:55,460][INFO ][node                     ] [Toad-In-Waiting] stopped
+[2022-07-26 10:38:55,460][INFO ][node                     ] [Toad-In-Waiting] closing ...
+[2022-07-26 10:38:55,472][INFO ][node                     ] [Toad-In-Waiting] closed
