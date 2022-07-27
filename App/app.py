@@ -77,9 +77,7 @@ def login():
 @login_required
 def dashboard():
     length = 0
-
     return render_template('dashboard.html', leng=length)
-
 
 @app.route("/dashboard/results", methods=['GET', 'POST'])
 @login_required
@@ -87,7 +85,7 @@ def request_search():
     search_term = request.form['input']
     res = es.search(
         index='catalogue',
-        body={"query": {"multi_match": {"query": search_term,"fields": ["name","subtopics","Department","Year","Module_learder"]}}})
+        body={"query": {"multi_match": {"query": search_term, "fields": ["name", "subtopics", "Department", "Year", "Module_learder"]}}})
 
     resp = json.dumps(res)
     respo = json.loads(resp)
@@ -95,13 +93,19 @@ def request_search():
     return render_template('dashboard.html', res=respo, leng=length)
 
 
+@app.route('/pageModule', methods=['GET', 'POST'])
+@login_required
+def pageModule():
+    return render_template('module-page.html')
+
+
 @ app.route('/modules', methods=['GET', 'POST'])
 @ login_required
 def modules():
-    req=requests.get('http://localhost:9200/catalogue/modules/_search')
-    data=req.content
-    json_data=json.loads(data)
-    data_length=len(json_data['hits']['hits'])
+    req = requests.get('http://localhost:9200/catalogue/modules/_search')
+    data = req.content
+    json_data = json.loads(data)
+    data_length = len(json_data['hits']['hits'])
     return render_template('modules.html', data=json_data, length=data_length)
 
 
@@ -120,11 +124,11 @@ def logout():
 
 @ app.route('/register', methods=['GET', 'POST'])
 def register():
-    form=RegisterForm()
+    form = RegisterForm()
 
     if form.validate_on_submit():
-        hashed_password=bcrypt.generate_password_hash(form.password.data)
-        new_user=User(username=form.username.data, password=hashed_password)
+        hashed_password = bcrypt.generate_password_hash(form.password.data)
+        new_user = User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))

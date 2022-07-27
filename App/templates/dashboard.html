@@ -15,9 +15,10 @@ block css %}
 </div>
   <div class="results-search">
     {% for i in range(0, leng) %}
-    
+    {% set x = res.hits.hits[i]._source.name %}
+    {% set x = x.replace(" ","") %}
     <p class="single-search-result">
-      <a> {{res.hits.hits[i]._source.name}} </a>
+      <a href="{{url_for('pageModule')}}"> {{res.hits.hits[i]._source.name}}</a>
     </p>
             
     {%endfor%}
