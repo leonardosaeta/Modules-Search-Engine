@@ -21,14 +21,18 @@ block css %}
           <h4>
             {{res.hits.hits[i]._source.name}}
           </h4>
+
           <div class="decription">
 
             <p class="module-leader">
               Module Leader: {{res.hits.hits[i]._source.Module_learder}}
             </p>
-            <p class="Department">
+            <p class="department">
                 Department: {{res.hits.hits[i]._source.Department}}
             </p>
+            <p class="level">
+              Level: {{res.hits.hits[i]._source.Year}}
+          </p>
 
           </div>
     </form>

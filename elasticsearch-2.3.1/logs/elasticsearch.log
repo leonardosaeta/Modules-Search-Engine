@@ -13,3 +13,7 @@
 [2022-07-30 10:12:43,942][INFO ][node                     ] [Silhouette] started
 [2022-07-30 10:12:44,039][INFO ][gateway                  ] [Silhouette] recovered [2] indices into cluster_state
 [2022-07-30 10:12:44,705][INFO ][cluster.routing.allocation] [Silhouette] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0], [catalogue][4]] ...]).
+[2022-07-30 16:48:55,334][INFO ][node                     ] [Silhouette] stopping ...
+[2022-07-30 16:48:55,495][INFO ][node                     ] [Silhouette] stopped
+[2022-07-30 16:48:55,495][INFO ][node                     ] [Silhouette] closing ...
+[2022-07-30 16:48:55,514][INFO ][node                     ] [Silhouette] closed

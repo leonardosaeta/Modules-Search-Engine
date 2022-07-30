@@ -103,7 +103,6 @@ def pageModule():
         body={"query":{"match" : {"name":topic}}})
     resp = json.dumps(res)
     respo = json.loads(resp)
-    print(topic)
     return render_template('module-page.html', title=respo)
 
 

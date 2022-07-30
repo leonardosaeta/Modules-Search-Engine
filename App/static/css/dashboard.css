@@ -58,6 +58,7 @@
 .module-button{
     border: none;
     background-color: rgb(225, 225, 225);
+    width: 100%;
 }
 
 .module-button:focus {
@@ -67,4 +68,18 @@
 
 .module-button:focus{
     outline:none !important;
+}
+
+.decription{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    font-style: italic;
+}
+
+.department{
+    margin-left: 5%;
+}
+.level{
+    margin-left: 5%;
 }
