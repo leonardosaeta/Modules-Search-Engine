@@ -1,1 +1,9 @@
 {% extends "mainTemplate.html" %}
+{% block title %} {{title['hits']['hits'][0]['_source']['name']}} {% endblock %}
+
+{% block content %}
+<div class="module">
+    <h3>{{title['hits']['hits'][0]['_source']['name']}}</h3>
+    <p>{{title['hits']['hits'][0]['_source']['Module_learder']}}</p>
+</div>
+{% endblock %}

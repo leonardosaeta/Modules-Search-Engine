@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, jsonify, request
+from flask import Flask, render_template, url_for, redirect, request, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -79,6 +79,7 @@ def dashboard():
     length = 0
     return render_template('dashboard.html', leng=length)
 
+
 @app.route("/dashboard/results", methods=['GET', 'POST'])
 @login_required
 def request_search():
@@ -93,10 +94,17 @@ def request_search():
     return render_template('dashboard.html', res=respo, leng=length)
 
 
-@app.route('/pageModule', methods=['GET', 'POST'])
+@app.route('/dashboard/pageModule/', methods=['GET', 'POST'])
 @login_required
 def pageModule():
-    return render_template('module-page.html')
+    topic = request.form['topic']
+    res = es.search(
+        index='catalogue',
+        body={"query":{"match" : {"name":topic}}})
+    resp = json.dumps(res)
+    respo = json.loads(resp)
+    print(topic)
+    return render_template('module-page.html', title=respo)
 
 
 @ app.route('/modules', methods=['GET', 'POST'])

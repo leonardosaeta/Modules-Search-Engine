@@ -1,15 +1,15 @@
-[2022-07-27 11:50:46,963][INFO ][node                     ] [Iridia] version[2.3.1], pid[36404], build[bd98092/2016-04-04T12:25:05Z]
-[2022-07-27 11:50:46,966][INFO ][node                     ] [Iridia] initializing ...
-[2022-07-27 11:50:47,618][INFO ][plugins                  ] [Iridia] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-07-27 11:50:47,648][INFO ][env                      ] [Iridia] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [415.3gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-07-27 11:50:47,648][INFO ][env                      ] [Iridia] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-07-27 11:50:47,648][WARN ][env                      ] [Iridia] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-07-27 11:50:49,509][INFO ][node                     ] [Iridia] initialized
-[2022-07-27 11:50:49,509][INFO ][node                     ] [Iridia] starting ...
-[2022-07-27 11:50:49,667][INFO ][transport                ] [Iridia] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-07-27 11:50:49,673][INFO ][discovery                ] [Iridia] elasticsearch/UpfQTjKeQcu7S7Nz6Hi_BA
-[2022-07-27 11:50:52,799][INFO ][cluster.service          ] [Iridia] new_master {Iridia}{UpfQTjKeQcu7S7Nz6Hi_BA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-07-27 11:50:52,859][INFO ][http                     ] [Iridia] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-07-27 11:50:52,860][INFO ][node                     ] [Iridia] started
-[2022-07-27 11:50:52,966][INFO ][gateway                  ] [Iridia] recovered [2] indices into cluster_state
-[2022-07-27 11:50:53,595][INFO ][cluster.routing.allocation] [Iridia] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][2], [catalogue][3]] ...]).
+[2022-07-30 10:12:38,156][INFO ][node                     ] [Silhouette] version[2.3.1], pid[2220], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-30 10:12:38,159][INFO ][node                     ] [Silhouette] initializing ...
+[2022-07-30 10:12:38,799][INFO ][plugins                  ] [Silhouette] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-30 10:12:38,825][INFO ][env                      ] [Silhouette] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [403.9gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-30 10:12:38,825][INFO ][env                      ] [Silhouette] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-30 10:12:38,825][WARN ][env                      ] [Silhouette] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-30 10:12:40,598][INFO ][node                     ] [Silhouette] initialized
+[2022-07-30 10:12:40,599][INFO ][node                     ] [Silhouette] starting ...
+[2022-07-30 10:12:40,758][INFO ][transport                ] [Silhouette] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-30 10:12:40,764][INFO ][discovery                ] [Silhouette] elasticsearch/1FwhONzrQSWFQTkr5OKCgA
+[2022-07-30 10:12:43,900][INFO ][cluster.service          ] [Silhouette] new_master {Silhouette}{1FwhONzrQSWFQTkr5OKCgA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-30 10:12:43,941][INFO ][http                     ] [Silhouette] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-30 10:12:43,942][INFO ][node                     ] [Silhouette] started
+[2022-07-30 10:12:44,039][INFO ][gateway                  ] [Silhouette] recovered [2] indices into cluster_state
+[2022-07-30 10:12:44,705][INFO ][cluster.routing.allocation] [Silhouette] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0], [catalogue][4]] ...]).

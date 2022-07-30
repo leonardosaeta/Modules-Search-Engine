@@ -1,0 +1,38 @@
+[2022-07-28 00:06:34,682][INFO ][node                     ] [George Washington Bridge] version[2.3.1], pid[1298], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-28 00:06:34,684][INFO ][node                     ] [George Washington Bridge] initializing ...
+[2022-07-28 00:06:35,233][INFO ][plugins                  ] [George Washington Bridge] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-28 00:06:35,260][INFO ][env                      ] [George Washington Bridge] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [416.4gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-28 00:06:35,260][INFO ][env                      ] [George Washington Bridge] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-28 00:06:35,260][WARN ][env                      ] [George Washington Bridge] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-28 00:06:36,838][INFO ][node                     ] [George Washington Bridge] initialized
+[2022-07-28 00:06:36,838][INFO ][node                     ] [George Washington Bridge] starting ...
+[2022-07-28 00:06:36,976][INFO ][transport                ] [George Washington Bridge] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-28 00:06:36,981][INFO ][discovery                ] [George Washington Bridge] elasticsearch/VTde-YD3TG2UDeJRtjqnEg
+[2022-07-28 00:06:40,103][INFO ][cluster.service          ] [George Washington Bridge] new_master {George Washington Bridge}{VTde-YD3TG2UDeJRtjqnEg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-28 00:06:40,152][INFO ][http                     ] [George Washington Bridge] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-28 00:06:40,154][INFO ][node                     ] [George Washington Bridge] started
+[2022-07-28 00:06:40,225][INFO ][gateway                  ] [George Washington Bridge] recovered [2] indices into cluster_state
+[2022-07-28 00:06:40,781][INFO ][cluster.routing.allocation] [George Washington Bridge] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][4], [catalogue][4], [catalogue][3]] ...]).
+[2022-07-28 03:04:08,645][INFO ][node                     ] [George Washington Bridge] stopping ...
+[2022-07-28 03:04:08,810][INFO ][node                     ] [George Washington Bridge] stopped
+[2022-07-28 03:04:08,811][INFO ][node                     ] [George Washington Bridge] closing ...
+[2022-07-28 03:04:08,832][INFO ][node                     ] [George Washington Bridge] closed
+[2022-07-28 10:33:22,645][INFO ][node                     ] [Marrina] version[2.3.1], pid[4016], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-28 10:33:22,646][INFO ][node                     ] [Marrina] initializing ...
+[2022-07-28 10:33:23,278][INFO ][plugins                  ] [Marrina] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-28 10:33:23,304][INFO ][env                      ] [Marrina] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [416.4gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-28 10:33:23,304][INFO ][env                      ] [Marrina] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-28 10:33:23,305][WARN ][env                      ] [Marrina] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-28 10:33:25,074][INFO ][node                     ] [Marrina] initialized
+[2022-07-28 10:33:25,075][INFO ][node                     ] [Marrina] starting ...
+[2022-07-28 10:33:25,224][INFO ][transport                ] [Marrina] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-28 10:33:25,229][INFO ][discovery                ] [Marrina] elasticsearch/SPmZrItgQxirAgU-177VTA
+[2022-07-28 10:33:28,385][INFO ][cluster.service          ] [Marrina] new_master {Marrina}{SPmZrItgQxirAgU-177VTA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-28 10:33:28,423][INFO ][http                     ] [Marrina] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-28 10:33:28,424][INFO ][node                     ] [Marrina] started
+[2022-07-28 10:33:28,510][INFO ][gateway                  ] [Marrina] recovered [2] indices into cluster_state
+[2022-07-28 10:33:29,177][INFO ][cluster.routing.allocation] [Marrina] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0], [catalogue][4]] ...]).
+[2022-07-28 11:29:42,895][INFO ][node                     ] [Marrina] stopping ...
+[2022-07-28 11:29:43,039][INFO ][node                     ] [Marrina] stopped
+[2022-07-28 11:29:43,040][INFO ][node                     ] [Marrina] closing ...
+[2022-07-28 11:29:43,060][INFO ][node                     ] [Marrina] closed

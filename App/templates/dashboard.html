@@ -13,14 +13,25 @@ block css %}
     </button>
   </form>
 </div>
+{% for i in range(0, leng) %}
+{% set x = res.hits.hits[i]._source.name %}
   <div class="results-search">
-    {% for i in range(0, leng) %}
-    {% set x = res.hits.hits[i]._source.name %}
-    {% set x = x.replace(" ","") %}
-    <p class="single-search-result">
-      <a href="{{url_for('pageModule')}}"> {{res.hits.hits[i]._source.name}}</a>
-    </p>
-            
+  <form class="single-search-result" action=/dashboard/pageModule/ method="post">
+        <button class="module-button" value={{x}} type="submit" name="topic">
+          <h4>
+            {{res.hits.hits[i]._source.name}}
+          </h4>
+          <div class="decription">
+
+            <p class="module-leader">
+              Module Leader: {{res.hits.hits[i]._source.Module_learder}}
+            </p>
+            <p class="Department">
+                Department: {{res.hits.hits[i]._source.Department}}
+            </p>
+
+          </div>
+    </form>
+  </div>
     {%endfor%}
     {% endblock %}
-  </div>

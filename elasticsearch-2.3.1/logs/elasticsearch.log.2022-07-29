@@ -1,0 +1,57 @@
+[2022-07-29 12:45:55,390][INFO ][node                     ] [Fang] version[2.3.1], pid[5589], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-29 12:45:55,392][INFO ][node                     ] [Fang] initializing ...
+[2022-07-29 12:45:55,960][INFO ][plugins                  ] [Fang] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-29 12:45:55,993][INFO ][env                      ] [Fang] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [413gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-29 12:45:55,993][INFO ][env                      ] [Fang] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-29 12:45:55,994][WARN ][env                      ] [Fang] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-29 12:45:57,499][INFO ][node                     ] [Fang] initialized
+[2022-07-29 12:45:57,500][INFO ][node                     ] [Fang] starting ...
+[2022-07-29 12:45:57,625][INFO ][transport                ] [Fang] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-29 12:45:57,630][INFO ][discovery                ] [Fang] elasticsearch/tgxtb3xwSXKqfLGE2Eporw
+[2022-07-29 12:46:00,747][INFO ][cluster.service          ] [Fang] new_master {Fang}{tgxtb3xwSXKqfLGE2Eporw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-29 12:46:00,790][INFO ][http                     ] [Fang] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-29 12:46:00,792][INFO ][node                     ] [Fang] started
+[2022-07-29 12:46:00,861][INFO ][gateway                  ] [Fang] recovered [2] indices into cluster_state
+[2022-07-29 12:46:01,402][INFO ][cluster.routing.allocation] [Fang] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][3], [catalogue][3]] ...]).
+[2022-07-29 13:40:26,412][INFO ][node                     ] [Fang] stopping ...
+[2022-07-29 13:40:26,555][INFO ][node                     ] [Fang] stopped
+[2022-07-29 13:40:26,557][INFO ][node                     ] [Fang] closing ...
+[2022-07-29 13:40:26,570][INFO ][node                     ] [Fang] closed
+[2022-07-29 15:31:52,803][INFO ][node                     ] [Gargantus] version[2.3.1], pid[6849], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-29 15:31:52,804][INFO ][node                     ] [Gargantus] initializing ...
+[2022-07-29 15:31:53,455][INFO ][plugins                  ] [Gargantus] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-29 15:31:53,481][INFO ][env                      ] [Gargantus] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [402.9gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-29 15:31:53,481][INFO ][env                      ] [Gargantus] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-29 15:31:53,481][WARN ][env                      ] [Gargantus] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-29 15:31:55,254][INFO ][node                     ] [Gargantus] initialized
+[2022-07-29 15:31:55,255][INFO ][node                     ] [Gargantus] starting ...
+[2022-07-29 15:31:55,412][INFO ][transport                ] [Gargantus] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-29 15:31:55,417][INFO ][discovery                ] [Gargantus] elasticsearch/QX4dr68YQ-eXLlgTShlktw
+[2022-07-29 15:31:58,538][INFO ][cluster.service          ] [Gargantus] new_master {Gargantus}{QX4dr68YQ-eXLlgTShlktw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-29 15:31:58,597][INFO ][http                     ] [Gargantus] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-29 15:31:58,599][INFO ][node                     ] [Gargantus] started
+[2022-07-29 15:31:58,707][INFO ][gateway                  ] [Gargantus] recovered [2] indices into cluster_state
+[2022-07-29 15:31:59,478][INFO ][cluster.routing.allocation] [Gargantus] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][4], [catalogue][0]] ...]).
+[2022-07-29 16:18:45,605][INFO ][node                     ] [Gargantus] stopping ...
+[2022-07-29 16:18:45,788][INFO ][node                     ] [Gargantus] stopped
+[2022-07-29 16:18:45,791][INFO ][node                     ] [Gargantus] closing ...
+[2022-07-29 16:18:45,805][INFO ][node                     ] [Gargantus] closed
+[2022-07-29 16:31:47,345][INFO ][node                     ] [Mikhail Rasputin] version[2.3.1], pid[1031], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-29 16:31:47,346][INFO ][node                     ] [Mikhail Rasputin] initializing ...
+[2022-07-29 16:31:48,082][INFO ][plugins                  ] [Mikhail Rasputin] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-29 16:31:48,146][INFO ][env                      ] [Mikhail Rasputin] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [403.9gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-29 16:31:48,146][INFO ][env                      ] [Mikhail Rasputin] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-29 16:31:48,146][WARN ][env                      ] [Mikhail Rasputin] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-29 16:31:50,721][INFO ][node                     ] [Mikhail Rasputin] initialized
+[2022-07-29 16:31:50,721][INFO ][node                     ] [Mikhail Rasputin] starting ...
+[2022-07-29 16:31:51,069][INFO ][transport                ] [Mikhail Rasputin] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-29 16:31:51,083][INFO ][discovery                ] [Mikhail Rasputin] elasticsearch/_SvUThMLQQOt4DNesvia3g
+[2022-07-29 16:31:54,230][INFO ][cluster.service          ] [Mikhail Rasputin] new_master {Mikhail Rasputin}{_SvUThMLQQOt4DNesvia3g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-29 16:31:54,293][INFO ][http                     ] [Mikhail Rasputin] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-29 16:31:54,295][INFO ][node                     ] [Mikhail Rasputin] started
+[2022-07-29 16:31:54,377][INFO ][gateway                  ] [Mikhail Rasputin] recovered [2] indices into cluster_state
+[2022-07-29 16:31:55,031][INFO ][cluster.routing.allocation] [Mikhail Rasputin] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0]] ...]).
+[2022-07-29 17:25:04,071][INFO ][node                     ] [Mikhail Rasputin] stopping ...
+[2022-07-29 17:25:04,220][INFO ][node                     ] [Mikhail Rasputin] stopped
+[2022-07-29 17:25:04,221][INFO ][node                     ] [Mikhail Rasputin] closing ...
+[2022-07-29 17:25:04,238][INFO ][node                     ] [Mikhail Rasputin] closed
