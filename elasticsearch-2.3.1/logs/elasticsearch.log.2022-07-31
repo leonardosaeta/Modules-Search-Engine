@@ -1,0 +1,19 @@
+[2022-07-31 18:24:30,339][INFO ][node                     ] [Nameless One] version[2.3.1], pid[4268], build[bd98092/2016-04-04T12:25:05Z]
+[2022-07-31 18:24:30,342][INFO ][node                     ] [Nameless One] initializing ...
+[2022-07-31 18:24:31,008][INFO ][plugins                  ] [Nameless One] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-07-31 18:24:31,035][INFO ][env                      ] [Nameless One] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [416.2gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-07-31 18:24:31,035][INFO ][env                      ] [Nameless One] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-07-31 18:24:31,035][WARN ][env                      ] [Nameless One] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-07-31 18:24:32,870][INFO ][node                     ] [Nameless One] initialized
+[2022-07-31 18:24:32,870][INFO ][node                     ] [Nameless One] starting ...
+[2022-07-31 18:24:33,073][INFO ][transport                ] [Nameless One] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-07-31 18:24:33,086][INFO ][discovery                ] [Nameless One] elasticsearch/M0cwvHt6T9izFTBJknjK1Q
+[2022-07-31 18:24:36,221][INFO ][cluster.service          ] [Nameless One] new_master {Nameless One}{M0cwvHt6T9izFTBJknjK1Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-07-31 18:24:36,245][INFO ][http                     ] [Nameless One] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-07-31 18:24:36,246][INFO ][node                     ] [Nameless One] started
+[2022-07-31 18:24:36,320][INFO ][gateway                  ] [Nameless One] recovered [2] indices into cluster_state
+[2022-07-31 18:24:36,957][INFO ][cluster.routing.allocation] [Nameless One] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0], [catalogue][4]] ...]).
+[2022-07-31 18:34:41,125][INFO ][node                     ] [Nameless One] stopping ...
+[2022-07-31 18:34:41,305][INFO ][node                     ] [Nameless One] stopped
+[2022-07-31 18:34:41,306][INFO ][node                     ] [Nameless One] closing ...
+[2022-07-31 18:34:41,324][INFO ][node                     ] [Nameless One] closed

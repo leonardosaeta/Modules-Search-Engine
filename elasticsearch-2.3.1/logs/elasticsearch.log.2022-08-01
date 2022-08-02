@@ -1,0 +1,51 @@
+[2022-08-01 13:31:00,463][INFO ][node                     ] [Nico Minoru] version[2.3.1], pid[2611], build[bd98092/2016-04-04T12:25:05Z]
+[2022-08-01 13:31:00,466][INFO ][node                     ] [Nico Minoru] initializing ...
+[2022-08-01 13:31:01,000][ERROR][bootstrap                ] Exception
+java.lang.IllegalArgumentException: Plugin [ingest-attachment] must be at least a jvm or site plugin
+	at org.elasticsearch.plugins.PluginInfo.readFromProperties(PluginInfo.java:107)
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:378)
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:128)
+	at org.elasticsearch.node.Node.<init>(Node.java:158)
+	at org.elasticsearch.node.Node.<init>(Node.java:140)
+	at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:143)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:178)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:270)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+[2022-08-01 13:32:32,528][INFO ][node                     ] [Mister Two] version[2.3.1], pid[2637], build[bd98092/2016-04-04T12:25:05Z]
+[2022-08-01 13:32:32,529][INFO ][node                     ] [Mister Two] initializing ...
+[2022-08-01 13:32:33,167][INFO ][plugins                  ] [Mister Two] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-08-01 13:32:33,198][INFO ][env                      ] [Mister Two] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [413.6gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-08-01 13:32:33,198][INFO ][env                      ] [Mister Two] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-08-01 13:32:33,198][WARN ][env                      ] [Mister Two] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-08-01 13:32:35,076][INFO ][node                     ] [Mister Two] initialized
+[2022-08-01 13:32:35,077][INFO ][node                     ] [Mister Two] starting ...
+[2022-08-01 13:32:35,232][INFO ][transport                ] [Mister Two] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-08-01 13:32:35,238][INFO ][discovery                ] [Mister Two] elasticsearch/NEnoYWEVTd-08yqOBj5S3g
+[2022-08-01 13:32:38,367][INFO ][cluster.service          ] [Mister Two] new_master {Mister Two}{NEnoYWEVTd-08yqOBj5S3g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-08-01 13:32:38,415][INFO ][http                     ] [Mister Two] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-08-01 13:32:38,417][INFO ][node                     ] [Mister Two] started
+[2022-08-01 13:32:38,514][INFO ][gateway                  ] [Mister Two] recovered [2] indices into cluster_state
+[2022-08-01 13:32:39,231][INFO ][cluster.routing.allocation] [Mister Two] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][2], [catalogue][2]] ...]).
+[2022-08-01 13:35:01,290][INFO ][node                     ] [Mister Two] stopping ...
+[2022-08-01 13:35:01,436][INFO ][node                     ] [Mister Two] stopped
+[2022-08-01 13:35:01,437][INFO ][node                     ] [Mister Two] closing ...
+[2022-08-01 13:35:01,453][INFO ][node                     ] [Mister Two] closed
+[2022-08-01 14:28:48,540][INFO ][node                     ] [Miracle Man] version[2.3.1], pid[3609], build[bd98092/2016-04-04T12:25:05Z]
+[2022-08-01 14:28:48,541][INFO ][node                     ] [Miracle Man] initializing ...
+[2022-08-01 14:28:49,096][INFO ][plugins                  ] [Miracle Man] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-08-01 14:28:49,122][INFO ][env                      ] [Miracle Man] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [414.5gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-08-01 14:28:49,122][INFO ][env                      ] [Miracle Man] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-08-01 14:28:49,122][WARN ][env                      ] [Miracle Man] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-08-01 14:28:50,702][INFO ][node                     ] [Miracle Man] initialized
+[2022-08-01 14:28:50,702][INFO ][node                     ] [Miracle Man] starting ...
+[2022-08-01 14:28:50,832][INFO ][transport                ] [Miracle Man] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-08-01 14:28:50,836][INFO ][discovery                ] [Miracle Man] elasticsearch/wsvp7zuYSSyztUaGhxpq0g
+[2022-08-01 14:28:53,946][INFO ][cluster.service          ] [Miracle Man] new_master {Miracle Man}{wsvp7zuYSSyztUaGhxpq0g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-08-01 14:28:53,990][INFO ][http                     ] [Miracle Man] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-08-01 14:28:53,991][INFO ][node                     ] [Miracle Man] started
+[2022-08-01 14:28:54,052][INFO ][gateway                  ] [Miracle Man] recovered [2] indices into cluster_state
+[2022-08-01 14:28:54,638][INFO ][cluster.routing.allocation] [Miracle Man] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][1], [catalogue][1]] ...]).
+[2022-08-01 17:04:22,137][INFO ][node                     ] [Miracle Man] stopping ...
+[2022-08-01 17:04:22,315][INFO ][node                     ] [Miracle Man] stopped
+[2022-08-01 17:04:22,316][INFO ][node                     ] [Miracle Man] closing ...
+[2022-08-01 17:04:22,333][INFO ][node                     ] [Miracle Man] closed

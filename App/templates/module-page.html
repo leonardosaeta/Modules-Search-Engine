@@ -2,8 +2,21 @@
 {% block title %} {{title['hits']['hits'][0]['_source']['name']}} {% endblock %}
 
 {% block content %}
-<div class="module">
-    <h3>{{title['hits']['hits'][0]['_source']['name']}}</h3>
-    <p>{{title['hits']['hits'][0]['_source']['Module_learder']}}</p>
+<div>
+    <div class="module">
+        <h3>{{title['hits']['hits'][0]['_source']['name']}}</h3>
+        <p>{{title['hits']['hits'][0]['_source']['Module_learder']}}</p>
+    </div>
 </div>
+
+{% set x = title['hits']['hits'][0]['_source']['name'] %}
+{% for i in range(0, all_lec_len) %}
+<form action="/download" method="post">
+    <input name='category' type='hidden' value="{{x}}">
+    <button type="submit" name="lecture" value={{all_lec[i]}} >{{all_lec[i]}}
+</form>
+{%endfor%}
 {% endblock %}
+
+<!---<a href="{{ url_for('.download_file') }}">{{all_lec[i]}} </a>--->
+

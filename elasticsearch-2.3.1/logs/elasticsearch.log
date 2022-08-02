@@ -1,19 +1,15 @@
-[2022-07-30 10:12:38,156][INFO ][node                     ] [Silhouette] version[2.3.1], pid[2220], build[bd98092/2016-04-04T12:25:05Z]
-[2022-07-30 10:12:38,159][INFO ][node                     ] [Silhouette] initializing ...
-[2022-07-30 10:12:38,799][INFO ][plugins                  ] [Silhouette] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-07-30 10:12:38,825][INFO ][env                      ] [Silhouette] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [403.9gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-07-30 10:12:38,825][INFO ][env                      ] [Silhouette] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-07-30 10:12:38,825][WARN ][env                      ] [Silhouette] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-07-30 10:12:40,598][INFO ][node                     ] [Silhouette] initialized
-[2022-07-30 10:12:40,599][INFO ][node                     ] [Silhouette] starting ...
-[2022-07-30 10:12:40,758][INFO ][transport                ] [Silhouette] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-07-30 10:12:40,764][INFO ][discovery                ] [Silhouette] elasticsearch/1FwhONzrQSWFQTkr5OKCgA
-[2022-07-30 10:12:43,900][INFO ][cluster.service          ] [Silhouette] new_master {Silhouette}{1FwhONzrQSWFQTkr5OKCgA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-07-30 10:12:43,941][INFO ][http                     ] [Silhouette] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-07-30 10:12:43,942][INFO ][node                     ] [Silhouette] started
-[2022-07-30 10:12:44,039][INFO ][gateway                  ] [Silhouette] recovered [2] indices into cluster_state
-[2022-07-30 10:12:44,705][INFO ][cluster.routing.allocation] [Silhouette] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0], [catalogue][4]] ...]).
-[2022-07-30 16:48:55,334][INFO ][node                     ] [Silhouette] stopping ...
-[2022-07-30 16:48:55,495][INFO ][node                     ] [Silhouette] stopped
-[2022-07-30 16:48:55,495][INFO ][node                     ] [Silhouette] closing ...
-[2022-07-30 16:48:55,514][INFO ][node                     ] [Silhouette] closed
+[2022-08-02 12:27:52,559][INFO ][node                     ] [Bandit] version[2.3.1], pid[5928], build[bd98092/2016-04-04T12:25:05Z]
+[2022-08-02 12:27:52,562][INFO ][node                     ] [Bandit] initializing ...
+[2022-08-02 12:27:53,242][INFO ][plugins                  ] [Bandit] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-08-02 12:27:53,269][INFO ][env                      ] [Bandit] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [414.3gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-08-02 12:27:53,269][INFO ][env                      ] [Bandit] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-08-02 12:27:53,269][WARN ][env                      ] [Bandit] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-08-02 12:27:55,058][INFO ][node                     ] [Bandit] initialized
+[2022-08-02 12:27:55,059][INFO ][node                     ] [Bandit] starting ...
+[2022-08-02 12:27:55,210][INFO ][transport                ] [Bandit] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-08-02 12:27:55,216][INFO ][discovery                ] [Bandit] elasticsearch/io-9IJgwTzy4Mb2tnK5bPQ
+[2022-08-02 12:27:58,344][INFO ][cluster.service          ] [Bandit] new_master {Bandit}{io-9IJgwTzy4Mb2tnK5bPQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-08-02 12:27:58,401][INFO ][http                     ] [Bandit] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-08-02 12:27:58,403][INFO ][node                     ] [Bandit] started
+[2022-08-02 12:27:58,497][INFO ][gateway                  ] [Bandit] recovered [2] indices into cluster_state
+[2022-08-02 12:27:59,195][INFO ][cluster.routing.allocation] [Bandit] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][3], [catalogue][3]] ...]).

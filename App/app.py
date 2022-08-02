@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request, session
+from flask import Flask, render_template, url_for, redirect, request, session, send_file
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -8,6 +8,7 @@ from flask_bcrypt import Bcrypt
 import requests
 import json
 from elasticsearch6 import Elasticsearch
+import os 
 
 es = Elasticsearch("http://localhost:9200/")
 app = Flask(__name__)
@@ -103,13 +104,26 @@ def pageModule():
         body={"query":{"match" : {"name":topic}}})
     resp = json.dumps(res)
     respo = json.loads(resp)
-    return render_template('module-page.html', title=respo)
 
+    title = respo['hits']['hits'][0]['_source']['name']
+    all_lec = os.listdir("/Users/leonardosaeta/Documents/Git/Modules-Search-Engine/App/Modules/"+title)
+    all_lec_len = len(all_lec)
+    return render_template('module-page.html', title=respo, all_lec=all_lec, all_lec_len=all_lec_len)
 
-@ app.route('/modules', methods=['GET', 'POST'])
-@ login_required
+@app.route('/download', methods=['GET', 'POST'])
+def download_file():
+    test = request.form['category']
+    print(test)
+    topic = request.form['lecture']
+    print(topic)
+    path = "/Users/leonardosaeta/Documents/Git/Modules-Search-Engine/App/Modules/"+test+"/"+topic
+    print(path)
+    return send_file(path, as_attachment=True)
+
+@app.route('/modules', methods=['GET', 'POST'])
+@login_required
 def modules():
-    req = requests.get('http://localhost:9200/catalogue/modules/_search')
+    req = requests.get('http://localhost:9200/modules/_search')
     data = req.content
     json_data = json.loads(data)
     data_length = len(json_data['hits']['hits'])
