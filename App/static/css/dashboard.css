@@ -70,6 +70,11 @@
     outline:none !important;
 }
 
+.descrp{
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
 .decription{
     display: flex;
     flex-direction: row;

@@ -1,15 +1,19 @@
-[2022-08-02 12:27:52,559][INFO ][node                     ] [Bandit] version[2.3.1], pid[5928], build[bd98092/2016-04-04T12:25:05Z]
-[2022-08-02 12:27:52,562][INFO ][node                     ] [Bandit] initializing ...
-[2022-08-02 12:27:53,242][INFO ][plugins                  ] [Bandit] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
-[2022-08-02 12:27:53,269][INFO ][env                      ] [Bandit] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [414.3gb], net total_space [460.4gb], spins? [unknown], types [apfs]
-[2022-08-02 12:27:53,269][INFO ][env                      ] [Bandit] heap size [989.8mb], compressed ordinary object pointers [true]
-[2022-08-02 12:27:53,269][WARN ][env                      ] [Bandit] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
-[2022-08-02 12:27:55,058][INFO ][node                     ] [Bandit] initialized
-[2022-08-02 12:27:55,059][INFO ][node                     ] [Bandit] starting ...
-[2022-08-02 12:27:55,210][INFO ][transport                ] [Bandit] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2022-08-02 12:27:55,216][INFO ][discovery                ] [Bandit] elasticsearch/io-9IJgwTzy4Mb2tnK5bPQ
-[2022-08-02 12:27:58,344][INFO ][cluster.service          ] [Bandit] new_master {Bandit}{io-9IJgwTzy4Mb2tnK5bPQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2022-08-02 12:27:58,401][INFO ][http                     ] [Bandit] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2022-08-02 12:27:58,403][INFO ][node                     ] [Bandit] started
-[2022-08-02 12:27:58,497][INFO ][gateway                  ] [Bandit] recovered [2] indices into cluster_state
-[2022-08-02 12:27:59,195][INFO ][cluster.routing.allocation] [Bandit] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][3], [catalogue][3]] ...]).
+[2022-08-03 16:00:18,801][INFO ][node                     ] [Headlok] version[2.3.1], pid[14401], build[bd98092/2016-04-04T12:25:05Z]
+[2022-08-03 16:00:18,804][INFO ][node                     ] [Headlok] initializing ...
+[2022-08-03 16:00:19,559][INFO ][plugins                  ] [Headlok] modules [reindex, lang-expression, lang-groovy], plugins [kopf], sites [kopf]
+[2022-08-03 16:00:19,592][INFO ][env                      ] [Headlok] using [1] data paths, mounts [[/System/Volumes/Data (/dev/disk3s5)]], net usable_space [410.7gb], net total_space [460.4gb], spins? [unknown], types [apfs]
+[2022-08-03 16:00:19,592][INFO ][env                      ] [Headlok] heap size [989.8mb], compressed ordinary object pointers [true]
+[2022-08-03 16:00:19,592][WARN ][env                      ] [Headlok] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2022-08-03 16:00:21,694][INFO ][node                     ] [Headlok] initialized
+[2022-08-03 16:00:21,702][INFO ][node                     ] [Headlok] starting ...
+[2022-08-03 16:00:21,937][INFO ][transport                ] [Headlok] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2022-08-03 16:00:21,950][INFO ][discovery                ] [Headlok] elasticsearch/HVrouBYqQ5mBeYiEYXqbqQ
+[2022-08-03 16:00:25,057][INFO ][cluster.service          ] [Headlok] new_master {Headlok}{HVrouBYqQ5mBeYiEYXqbqQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2022-08-03 16:00:25,114][INFO ][http                     ] [Headlok] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2022-08-03 16:00:25,116][INFO ][node                     ] [Headlok] started
+[2022-08-03 16:00:25,233][INFO ][gateway                  ] [Headlok] recovered [2] indices into cluster_state
+[2022-08-03 16:00:26,019][INFO ][cluster.routing.allocation] [Headlok] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[catalogue][0]] ...]).
+[2022-08-03 16:45:12,560][INFO ][node                     ] [Headlok] stopping ...
+[2022-08-03 16:45:12,729][INFO ][node                     ] [Headlok] stopped
+[2022-08-03 16:45:12,729][INFO ][node                     ] [Headlok] closing ...
+[2022-08-03 16:45:12,744][INFO ][node                     ] [Headlok] closed

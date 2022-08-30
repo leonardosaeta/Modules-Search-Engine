@@ -106,7 +106,7 @@ def pageModule():
     respo = json.loads(resp)
 
     title = respo['hits']['hits'][0]['_source']['name']
-    all_lec = os.listdir("/Users/leonardosaeta/Documents/Git/Modules-Search-Engine/App/Modules/"+title)
+    all_lec = sorted(os.listdir("/Users/leonardosaeta/Documents/Git/Modules-Search-Engine/App/Modules/"+title))
     all_lec_len = len(all_lec)
     return render_template('module-page.html', title=respo, all_lec=all_lec, all_lec_len=all_lec_len)
 
@@ -123,7 +123,7 @@ def download_file():
 @app.route('/modules', methods=['GET', 'POST'])
 @login_required
 def modules():
-    req = requests.get('http://localhost:9200/modules/_search')
+    req = requests.get('http://localhost:9200/catalogue/modules/_search')
     data = req.content
     json_data = json.loads(data)
     data_length = len(json_data['hits']['hits'])
